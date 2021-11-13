@@ -1,0 +1,39 @@
+* Python Template
+
+
+[[../../actions/workflows/build.yml/badge.svg]]
+
+
+A simple python project template.
+
+* Setup
+
+Setup the environment: 
+
+#+begin_src sh
+poetry env use 3.9.8
+#+end_src
+
+* Install
+
+#+begin_src sh
+poetry install
+#+end_src
+
+* Testing
+  
+To run the unit tests:  
+
+#+begin_src sh
+poetry run pytest
+#+end_src
+
+
+* Run
+  
+#+begin_src sh
+poetry run python python_template
+#+end_src
+
+#+RESULTS:
+: Hello World
