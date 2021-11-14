@@ -63,5 +63,5 @@ poetry run pytest --cov tests
   To generate stubs, in a place where [[https://github.com/microsoft/pyright][pyright]] will find them out of the box: 
 
   #+begin_src sh
-    poetry run pybind11-stubgen --ignore-invalid all -o typings <module name>
+    poetry run pybind11-stubgen --ignore-invalid all -o typings cv2
   #+end_src
