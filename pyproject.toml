@@ -1,12 +1,14 @@
 [tool.poetry]
-name = "python-template"
+name = "python-opencv"
 version = "0.1.0"
 description = ""
 authors = ["Ioannis Canellos <iocanel@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9,<3.11"
 pytest-coverage = "^0.0"
+opencv-python = "^4.5.4"
+numpy = "^1.21.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

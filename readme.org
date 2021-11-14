@@ -1,39 +1,46 @@
-* Python Template
+* Python OpenCV
 
+  [[../../actions/workflows/build.yml/badge.svg]]
 
-[[../../actions/workflows/build.yml/badge.svg]]
+  A simple opencv project in python that performs the following processes to an image:
 
+  - grayscale
+  - threshold
+  - denoise
+  - dilate
+  - erode
+  - canny edge detection
 
-A simple python project template.
+  These are steps that are found common in OCR preprocessing apps, a relatively simple field to showcase opencv.
 
 * Setup
 
-Setup the environment: 
+  Setup the environment: 
 
-#+begin_src sh
-poetry env use 3.9.8
-#+end_src
+  #+begin_src sh
+    poetry env use 3.9.8
+  #+end_src
 
 * Install
 
-#+begin_src sh
-poetry install
-#+end_src
+  #+begin_src sh
+    poetry install
+  #+end_src
 
 * Testing
   
-To run the unit tests:  
+  To run the unit tests:  
 
-#+begin_src sh
-poetry run pytest
-#+end_src
+  #+begin_src sh
+    poetry run pytest --cov tests
+  #+end_src
 
 
 * Run
-  
-#+begin_src sh
-poetry run python python_template
-#+end_src
 
-#+RESULTS:
-: Hello World
+  The example application performs OCR preprocessing.
+  The usage of this app is: `python python_opencv <input> <output>`.
+
+  #+begin_src sh
+    poetry run python python_opencv assets/gameboy.jpg output.jpg
+  #+end_src
