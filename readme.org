@@ -13,6 +13,8 @@
 
   These are steps that are found common in OCR preprocessing apps, a relatively simple field to showcase opencv.
 
+The project is using [[https://python-poetry.org/][poetry]] for managing dependencies, virtual environments and tools.
+
 * Setup
 
   Setup the environment: 
@@ -43,4 +45,22 @@
 
   #+begin_src sh
     poetry run python python_opencv assets/gameboy.jpg output.jpg
+  #+end_src
+
+* Editor setup
+
+  The project has been tested with [[https://github.com/microsoft/pyright][pyright]]. The tool will automatically detect [[./.venv]] for virtualenv and [[./typings]] for stubs and is expected to work out of the box.
+  In order to generate stubs, you can use [[https://github.com/sizmailov/pybind11-stubgen][pybind11-stubgen]] via [[https://python-poetry.org/][poetry]]:
+
+
+  To add the tool:
+
+  #+begin_src sh
+    poetry add pybind11-stubgen
+  #+end_src
+
+  To generate stubs, in a place where [[https://github.com/microsoft/pyright][pyright]] will find them out of the box: 
+
+  #+begin_src sh
+    poetry run pybind11-stubgen --ignore-invalid all -o typings <module name>
   #+end_src
