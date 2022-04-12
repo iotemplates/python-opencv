@@ -31,11 +31,12 @@ The project is using [[https://python-poetry.org/][poetry]] for managing depende
 
 * Testing
   
-  To run the unit tests:  
+The project has been configured to use pytest.
+To run the unit tests:  
 
-  #+begin_src sh
-    poetry run pytest --cov tests
-  #+end_src
+#+begin_src sh
+poetry run pytest --cov tests
+#+end_src
 
 
 * Run
